@@ -12,6 +12,8 @@ public class Account {
     // instance variables
     private String firstName, lastName, phoneNumber;
     private double balance = 0.0;
+    private String accountType;
+    private Customer customer;
     
     // constant
     private final String regex = "[a-z A-Z_]+";
@@ -22,6 +24,12 @@ public class Account {
         lastName = lname;
         this.phoneNumber = phoneNumber;
         this.balance = balance;
+    }
+    
+    public Account(String accType, Customer cust, double blc) {
+        accountType = accType;
+        customer = cust;
+        balance = blc;
     }
     
     // setter methods

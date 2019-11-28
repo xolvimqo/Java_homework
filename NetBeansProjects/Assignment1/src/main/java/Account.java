@@ -11,17 +11,21 @@ import java.util.regex.Pattern;
  * @author Terry
  */
 public class Account {
-    // 
+    // variables
     private String firstName, lastName;
     private double balance = 0.0;
+    
+    // constant
     private final String regex = "[a-z A-Z_]+";
-    // setter methods
+    
+    // constructure
     public Account(String fname, String lname, double balance) {
         firstName = fname;
         lastName = lname;
         this.balance = balance;
     }
     
+    // setter methods
     public void setfirstName(String fname) {
         if (!isLetterOnlyAlphabet(fname)) {
             throw new IllegalArgumentException("Please enter letters only!!");

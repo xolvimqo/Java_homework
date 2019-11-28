@@ -11,7 +11,7 @@ import java.time.LocalDate;
  *
  * @author Last_
  */
-public class FullTimeEmployee extends Employee { // Single level inheritance
+public class FullTimeEmployee extends Employee implements EmpInfo { // Single level inheritance
     private double ratePerHour, salary; // instance variables fof the FullTimeEmployee class
     
     // Constructor
@@ -19,5 +19,15 @@ public class FullTimeEmployee extends Employee { // Single level inheritance
         super(fName, lName, add, phNo, empId, dOB); // super keyword is used to initiate the super class arguments
         ratePerHour = rPerHour;
         salary = sal;
+    }
+
+    @Override
+    public void getEmpInfo() {
+        super.toString();
+    }
+
+    @Override
+    public double getEmpSalary() {
+        return salary;
     }
 }
